@@ -62,7 +62,6 @@ object ScalaGUI extends SimpleSwingApplication {
         }
 
         textPane.peer.setText(newText)
-      case _ =>
     }
 
   }
