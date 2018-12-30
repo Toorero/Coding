@@ -11,7 +11,7 @@ object Vigenére {
   private def offsetChar(c: Char, i: Int): Char = {
     require(
       (c >= 'a' && c <= 'z') || c == ' ',
-      "Es sind nur kleine Buchstaben von a bis z und Leerzeichen erlaubt!"
+      "Es sind nur kleine Buchstaben von a bis z und Leerzeichen in der Nachricht erlaubt!"
     )
 
     if (c == ' ') c else {

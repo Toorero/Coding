@@ -2,7 +2,7 @@ package CryptLibary
 
 object Blockweise {
 
-  def crypt(s: String)(key: Int => Int) = {
+  def crypt(s: String)(key: Int => Int): String = {
     val bits = s.map(s => toBinaryString(s.toInt, 8)).foldLeft("")(_ + _)
 
     val grouped = bits grouped 3 toList
@@ -23,7 +23,7 @@ object Blockweise {
   }
 
   def genKey(k: Array[Int]): Int => Int = {
-    require(k.length == 8)
+    require(k.length == 8, "Der Schlüssel muss aus 8 Zahlen bestehen!")
     i: Int => k(i)
   }
 
